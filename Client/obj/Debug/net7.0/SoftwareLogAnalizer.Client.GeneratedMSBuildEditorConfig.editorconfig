@@ -9,73 +9,73 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = SoftwareLogAnalizer.Client
 build_property.RootNamespace = SoftwareLogAnalizer.Client
-build_property.ProjectDir = D:\MyProjects\SoftwareLogAnalizer\Client\
+build_property.ProjectDir = D:\MyProjects\New\SoftwareLogAnalizer\Client\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\MyProjects\SoftwareLogAnalizer\Client
+build_property.MSBuildProjectDirectory = D:\MyProjects\New\SoftwareLogAnalizer\Client
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/MyProjects/SoftwareLogAnalizer/Client/App.razor]
+[D:/MyProjects/New/SoftwareLogAnalizer/Client/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/MyProjects/SoftwareLogAnalizer/Client/Pages/Companies/AddCompany.razor]
+[D:/MyProjects/New/SoftwareLogAnalizer/Client/Pages/Companies/AddCompany.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcGFuaWVzXEFkZENvbXBhbnkucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/MyProjects/SoftwareLogAnalizer/Client/Pages/Companies/Companies.razor]
+[D:/MyProjects/New/SoftwareLogAnalizer/Client/Pages/Companies/Companies.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcGFuaWVzXENvbXBhbmllcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/MyProjects/SoftwareLogAnalizer/Client/Pages/Counter.razor]
+[D:/MyProjects/New/SoftwareLogAnalizer/Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/MyProjects/SoftwareLogAnalizer/Client/Pages/Employees/AddEmployee.razor]
+[D:/MyProjects/New/SoftwareLogAnalizer/Client/Pages/Employees/AddEmployee.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVzXEFkZEVtcGxveWVlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/MyProjects/SoftwareLogAnalizer/Client/Pages/Employees/Employees.razor]
+[D:/MyProjects/New/SoftwareLogAnalizer/Client/Pages/Employees/Employees.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVzXEVtcGxveWVlcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/MyProjects/SoftwareLogAnalizer/Client/Pages/FetchData.razor]
+[D:/MyProjects/New/SoftwareLogAnalizer/Client/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/MyProjects/SoftwareLogAnalizer/Client/Pages/Index.razor]
+[D:/MyProjects/New/SoftwareLogAnalizer/Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/MyProjects/SoftwareLogAnalizer/Client/Pages/Resources/AddResource.razor]
+[D:/MyProjects/New/SoftwareLogAnalizer/Client/Pages/Resources/AddResource.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzb3VyY2VzXEFkZFJlc291cmNlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/MyProjects/SoftwareLogAnalizer/Client/Pages/Resources/Resources.razor]
+[D:/MyProjects/New/SoftwareLogAnalizer/Client/Pages/Resources/Resources.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzb3VyY2VzXFJlc291cmNlcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/MyProjects/SoftwareLogAnalizer/Client/Pages/Software/AddSoftware.razor]
+[D:/MyProjects/New/SoftwareLogAnalizer/Client/Pages/Software/AddSoftware.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU29mdHdhcmVcQWRkU29mdHdhcmUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/MyProjects/SoftwareLogAnalizer/Client/Pages/Software/Softwares.razor]
+[D:/MyProjects/New/SoftwareLogAnalizer/Client/Pages/Software/Softwares.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU29mdHdhcmVcU29mdHdhcmVzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/MyProjects/SoftwareLogAnalizer/Client/Shared/SurveyPrompt.razor]
+[D:/MyProjects/New/SoftwareLogAnalizer/Client/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/MyProjects/SoftwareLogAnalizer/Client/_Imports.razor]
+[D:/MyProjects/New/SoftwareLogAnalizer/Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/MyProjects/SoftwareLogAnalizer/Client/Shared/MainLayout.razor]
+[D:/MyProjects/New/SoftwareLogAnalizer/Client/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-ltg43ckni3
 
-[D:/MyProjects/SoftwareLogAnalizer/Client/Shared/NavMenu.razor]
+[D:/MyProjects/New/SoftwareLogAnalizer/Client/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-t5xupdj1x2

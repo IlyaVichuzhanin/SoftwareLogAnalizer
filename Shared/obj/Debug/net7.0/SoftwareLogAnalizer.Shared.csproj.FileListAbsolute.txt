@@ -12,3 +12,17 @@ D:\MyProjects\SoftwareLogAnalizer\Shared\obj\Debug\net7.0\refint\SoftwareLogAnal
 D:\MyProjects\SoftwareLogAnalizer\Shared\obj\Debug\net7.0\SoftwareLogAnalizer.Shared.pdb
 D:\MyProjects\SoftwareLogAnalizer\Shared\obj\Debug\net7.0\SoftwareLogAnalizer.Shared.genruntimeconfig.cache
 D:\MyProjects\SoftwareLogAnalizer\Shared\obj\Debug\net7.0\ref\SoftwareLogAnalizer.Shared.dll
+D:\MyProjects\New\SoftwareLogAnalizer\Shared\bin\Debug\net7.0\SoftwareLogAnalizer.Shared.deps.json
+D:\MyProjects\New\SoftwareLogAnalizer\Shared\bin\Debug\net7.0\SoftwareLogAnalizer.Shared.runtimeconfig.json
+D:\MyProjects\New\SoftwareLogAnalizer\Shared\bin\Debug\net7.0\SoftwareLogAnalizer.Shared.dll
+D:\MyProjects\New\SoftwareLogAnalizer\Shared\bin\Debug\net7.0\SoftwareLogAnalizer.Shared.pdb
+D:\MyProjects\New\SoftwareLogAnalizer\Shared\obj\Debug\net7.0\SoftwareLogAnalizer.Shared.csproj.AssemblyReference.cache
+D:\MyProjects\New\SoftwareLogAnalizer\Shared\obj\Debug\net7.0\SoftwareLogAnalizer.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyProjects\New\SoftwareLogAnalizer\Shared\obj\Debug\net7.0\SoftwareLogAnalizer.Shared.AssemblyInfoInputs.cache
+D:\MyProjects\New\SoftwareLogAnalizer\Shared\obj\Debug\net7.0\SoftwareLogAnalizer.Shared.AssemblyInfo.cs
+D:\MyProjects\New\SoftwareLogAnalizer\Shared\obj\Debug\net7.0\SoftwareLogAnalizer.Shared.csproj.CoreCompileInputs.cache
+D:\MyProjects\New\SoftwareLogAnalizer\Shared\obj\Debug\net7.0\SoftwareLogAnalizer.Shared.dll
+D:\MyProjects\New\SoftwareLogAnalizer\Shared\obj\Debug\net7.0\refint\SoftwareLogAnalizer.Shared.dll
+D:\MyProjects\New\SoftwareLogAnalizer\Shared\obj\Debug\net7.0\SoftwareLogAnalizer.Shared.pdb
+D:\MyProjects\New\SoftwareLogAnalizer\Shared\obj\Debug\net7.0\SoftwareLogAnalizer.Shared.genruntimeconfig.cache
+D:\MyProjects\New\SoftwareLogAnalizer\Shared\obj\Debug\net7.0\ref\SoftwareLogAnalizer.Shared.dll

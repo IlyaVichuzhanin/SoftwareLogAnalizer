@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HpXhiDPyNpXPnxuvgOrWcVE1FAEdo8WO3nKHPhWUbrW274afYXdJ06RAKV/9rUsVZSbxty7Tn8xsTG4V0VHXQg==",
+  "dgSpecHash": "j7GEyMVLMNWwpwlOapuxbhNQQs+4mRaWUWcsHEzyOWbb5ZmBevec+OFEWvXwOkUL2rfIxy2ZtlWes/1laxvFcw==",
   "success": true,
-  "projectFilePath": "D:\\MyProjects\\SoftwareLogAnalizer\\Shared\\SoftwareLogAnalizer.Shared.csproj",
+  "projectFilePath": "D:\\MyProjects\\New\\SoftwareLogAnalizer\\Shared\\SoftwareLogAnalizer.Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vychuzhanin.ia\\.nuget\\packages\\blazorise\\1.2.2\\blazorise.1.2.2.nupkg.sha512",
     "C:\\Users\\vychuzhanin.ia\\.nuget\\packages\\blazorise.datagrid\\1.2.2\\blazorise.datagrid.1.2.2.nupkg.sha512",

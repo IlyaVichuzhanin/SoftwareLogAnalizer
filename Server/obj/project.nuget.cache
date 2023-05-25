@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OnY51jBFHQ5CdgiVtV6T6ULCtC3+s8/V2gySVnGwg4YkFVzdqhfwm8Tx8FWcsIjNTEbqmOZs1XzymVq3KPxQeA==",
+  "dgSpecHash": "c4Is+2Lp8UqO0oWkJiXHDRVD6BFd7NbFeAnILp7JFNURShb16J9R10l0Kvwi36CFQd0evHiINksQEU9zgtiLOA==",
   "success": true,
-  "projectFilePath": "D:\\MyProjects\\SoftwareLogAnalizer\\Server\\SoftwareLogAnalizer.Server.csproj",
+  "projectFilePath": "D:\\MyProjects\\New\\SoftwareLogAnalizer\\Server\\SoftwareLogAnalizer.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vychuzhanin.ia\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\vychuzhanin.ia\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

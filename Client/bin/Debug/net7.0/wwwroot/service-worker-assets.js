@@ -933,19 +933,19 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-NIM4UAqBBqDvwCMHZos6o9mvHPUy12svpgalWrfHY+E=",
+      "hash": "sha256-u6JmZ3Z6PkZZrtj+5ED8fgxqfIlFweLm+cBf2P6cw28=",
       "url": "_framework\/SoftwareLogAnalizer.Shared.dll"
     },
     {
-      "hash": "sha256-3EONB9HixiHpk2LvfBIKtWZQOGeaQa\/0Jopj7N+x3tg=",
+      "hash": "sha256-wfcm7AXi53kU7nA5Jm\/IYPwiBCQe+BNQfslbLb3Ert0=",
       "url": "_framework\/SoftwareLogAnalizer.Shared.pdb"
     },
     {
-      "hash": "sha256-h8BUVl3usI95DY2sJEyd42eVa3TPia2gtwEwwU7OrKM=",
+      "hash": "sha256-9xilOcBFQfId8PwcSvsglah9pX\/colDYoqf5rUWFphw=",
       "url": "_framework\/SoftwareLogAnalizer.Client.dll"
     },
     {
-      "hash": "sha256-dX4Vg4Lc3PMz6RnYTbz7I30P+\/qN2f\/OinQKUZloWUE=",
+      "hash": "sha256-IV9GjPWG+sIr+sllh4IPstzuf3z4c0FTyUGZXHSCo+o=",
       "url": "_framework\/SoftwareLogAnalizer.Client.pdb"
     },
     {
@@ -953,7 +953,7 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-QWzcscLRjfhV23dSaiX5agAvRN810s1FJmzyHs7guiM=",
+      "hash": "sha256-lrRt6LAsQW\/LeGMcflGXUR7T7wI3XQXkvUFbsQF23us=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -1105,5 +1105,5 @@
       "url": "_content\/Blazorise.DataGrid\/datagrid.js"
     }
   ],
-  "version": "3QcSVVhE"
+  "version": "d6Oz1n+2"
 };

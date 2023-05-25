@@ -11796,11 +11796,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MyProjects\\SoftwareLogAnalizer\\Server\\SoftwareLogAnalizer.Server.csproj",
+      "projectUniqueName": "D:\\MyProjects\\New\\SoftwareLogAnalizer\\Server\\SoftwareLogAnalizer.Server.csproj",
       "projectName": "SoftwareLogAnalizer.Server",
-      "projectPath": "D:\\MyProjects\\SoftwareLogAnalizer\\Server\\SoftwareLogAnalizer.Server.csproj",
+      "projectPath": "D:\\MyProjects\\New\\SoftwareLogAnalizer\\Server\\SoftwareLogAnalizer.Server.csproj",
       "packagesPath": "C:\\Users\\vychuzhanin.ia\\.nuget\\packages\\",
-      "outputPath": "D:\\MyProjects\\SoftwareLogAnalizer\\Server\\obj\\",
+      "outputPath": "D:\\MyProjects\\New\\SoftwareLogAnalizer\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -11821,11 +11821,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\MyProjects\\SoftwareLogAnalizer\\Client\\SoftwareLogAnalizer.Client.csproj": {
-              "projectPath": "D:\\MyProjects\\SoftwareLogAnalizer\\Client\\SoftwareLogAnalizer.Client.csproj"
+            "D:\\MyProjects\\New\\SoftwareLogAnalizer\\Client\\SoftwareLogAnalizer.Client.csproj": {
+              "projectPath": "D:\\MyProjects\\New\\SoftwareLogAnalizer\\Client\\SoftwareLogAnalizer.Client.csproj"
             },
-            "D:\\MyProjects\\SoftwareLogAnalizer\\Shared\\SoftwareLogAnalizer.Shared.csproj": {
-              "projectPath": "D:\\MyProjects\\SoftwareLogAnalizer\\Shared\\SoftwareLogAnalizer.Shared.csproj"
+            "D:\\MyProjects\\New\\SoftwareLogAnalizer\\Shared\\SoftwareLogAnalizer.Shared.csproj": {
+              "projectPath": "D:\\MyProjects\\New\\SoftwareLogAnalizer\\Shared\\SoftwareLogAnalizer.Shared.csproj"
             }
           }
         }

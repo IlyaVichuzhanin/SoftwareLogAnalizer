@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows,browser
 build_property.RootNamespace = SoftwareLogAnalizer.Shared
-build_property.ProjectDir = D:\MyProjects\SoftwareLogAnalizer\Shared\
+build_property.ProjectDir = D:\MyProjects\New\SoftwareLogAnalizer\Shared\

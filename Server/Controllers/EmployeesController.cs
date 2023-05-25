@@ -32,8 +32,8 @@ namespace SoftwareLogAnalizer.Server.Controllers
                     return NotFound();
                 }
                 var employes = await _context.Employees
-                      //.Include(e => e.Company)
-                      //.Include(e => e.Resource)
+                      .Include(e => e.Company)
+                      .Include(e => e.Resource)
                       .ToListAsync();
                 return employes;
         }
