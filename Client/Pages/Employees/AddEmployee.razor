@@ -1,0 +1,76 @@
+﻿@inject HttpClient http
+@using System.Net.Http.Json
+@using SoftwareLogAnalizer.Shared
+@using SoftwareLogAnalizer.Shared.Model
+@using SoftwareLogAnalizer.Shared.Model.Enums
+@inject MudBlazor.ISnackbar Snackbar
+@inject IDialogService DialogService
+
+
+<MudDialog>
+    <DialogContent>
+        <MudTextField T="string" Style="width: 25000px;" @bind-Value=employee.FullName Label="Full name"></MudTextField>
+        <MudSelect T="int" Style="width: 25000px;" @bind-Value=employee.ResourceID Required RequiredError="You must select a Resource" Margin="@Margin.Dense">
+            @foreach (Resource item in resources)
+            {
+                <MudSelectItem Value="@item.Id">@item.ResourceName</MudSelectItem>
+            }
+        </MudSelect>
+        <MudSelect T="EmployeType" Style="width: 25000px;" @bind-Value=employee.EmployeType Required RequiredError="You must select Employe type" Margin="@Margin.Dense">
+            @foreach (EmployeType type in Enum.GetValues(typeof(EmployeType)))
+            {
+                <MudSelectItem Value="@type">@type</MudSelectItem>
+            }
+        </MudSelect>
+        <MudSelect T="int" Style="width: 25000px;" @bind-Value=employee.CompanyId Required RequiredError="You must select a Company" Margin="@Margin.Dense">
+            @foreach (Company item in companies)
+            {
+                <MudSelectItem Value="@item.Id">@item.CompanyName</MudSelectItem>
+            }
+        </MudSelect>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Primary" OnClick="Add">Add Employee</MudButton>
+    </DialogActions>
+</MudDialog>
+@code {
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+    Employee employee = new Employee();
+    private IEnumerable<Resource> resources = new List<Resource>();
+    private IEnumerable<Company> companies = new List<Company>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    public async Task LoadData()
+    {
+        var unsortedCompanyies = await http.GetFromJsonAsync<List<Company>>("api/Companies/GetCompanies");
+        companies = unsortedCompanyies.OrderBy(x => x.Id).ToList();
+        var unsortedResources = await http.GetFromJsonAsync<List<Resource>>("api/Resources/GetResources");
+        resources = unsortedResources.OrderBy(x => x.Id).ToList();
+    }
+
+    async Task Add()
+    {
+        var response = await http.PostAsJsonAsync("api/Employees/PostEmployee", employee);
+        MudDialog.Close(DialogResult.Ok(true));
+        Snackbar.Add("Employee Added", Severity.Success);
+
+        var x = response;
+        if (response.IsSuccessStatusCode)
+        {
+            var newPerson = await response.Content.ReadFromJsonAsync<Employee>();
+
+        }
+        else
+        {
+            var error = 1;
+        }
+
+
+    }
+    void Cancel() => MudDialog.Cancel();
+}

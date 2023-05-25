@@ -1,0 +1,152 @@
+﻿@page "/Softwares"
+@inject HttpClient http
+@using System.Net.Http.Json
+@using SoftwareLogAnalizer.Shared
+@using SoftwareLogAnalizer.Shared.Model
+@using SoftwareLogAnalizer.Shared.Model.Enums
+@inject MudBlazor.ISnackbar Snackbar
+@inject IDialogService DialogService
+
+
+<h3>Softwares</h3>
+
+<MudButton @onclick="OpenDialog" Variant="Variant.Filled" Color="Color.Primary">
+    Add new Software
+</MudButton>
+
+<MudDataGrid T="Software" Items=softwares FixedHeader="true" FixedFooter="true" ReadOnly="@_readOnly" EditMode="@(_isCellEditMode ? DataGridEditMode.Cell : DataGridEditMode.Form)"
+             StartedEditingItem="@StartedEditingItem" CanceledEditingItem="@CanceledEditingItem" CommittedItemChanges="@CommittedItemChanges"
+             Bordered="true" Dense="true" EditTrigger="@(_editTriggerRowClick ? DataGridEditTrigger.OnRowClick : DataGridEditTrigger.Manual)"
+             SortMode="SortMode.Multiple" Filterable="true" QuickFilter="@_quickFilter">
+    <ToolBarContent>
+        @*<MudText Typo="Typo.h6">Periodic Elements</MudText>*@
+        <MudSpacer />
+        <MudTextField @bind-Value="_searchString" Placeholder="Search" Adornment="Adornment.Start" Immediate="true"
+                      AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+    </ToolBarContent>
+    <Columns>
+        <PropertyColumn CellStyle="width: 5px" Property="x => x.Id" Title="Id" IsEditable="false" />
+        <PropertyColumn CellStyle="width: 700px" Property="x => x.SoftwareName" Title="Company name" />
+        <TemplateColumn Hidden="@(_isCellEditMode || _readOnly || _editTriggerRowClick)" CellClass="d-flex justify-end">
+            <CellTemplate>
+                <MudIconButton Size="@Size.Small" Icon="@Icons.Material.Outlined.Edit" OnClick="@context.Actions.StartEditingItemAsync" />
+                <MudIconButton Size="@Size.Small" Icon="@Icons.Material.Outlined.Delete" OnClick="@(() => Delete(@context.Item.Id))" />
+            </CellTemplate>
+        </TemplateColumn>
+    </Columns>
+    <PagerContent>
+        <MudDataGridPager T="Software" />
+    </PagerContent>
+</MudDataGrid>
+
+<div class="d-flex flex-wrap mt-4">
+    <MudSwitch @bind-Checked="@_readOnly" Color="Color.Primary">Read Only</MudSwitch>
+    <div class="d-flex justify-start align-center">
+        <p class="mud-typography mud-typography-body1 mud-inherit-text mr-2">Form</p>
+        <MudSwitch @bind-Checked="@_isCellEditMode">Cell</MudSwitch>
+    </div>
+    <div class="d-flex justify-start align-center">
+        <p class="mud-typography mud-typography-body1 mud-inherit-text mr-2">Manual</p>
+        <MudSwitch @bind-Checked="@_editTriggerRowClick">On Row Click</MudSwitch>
+    </div>
+</div>
+
+@*<MudExpansionPanels Style="flex:1">
+    <MudExpansionPanel Text="Show Events">
+        @foreach (var message in _events)
+        {
+            <MudText Typo="@Typo.body2">@message</MudText>
+        }
+        @if (_events.Count > 0)
+        {
+            <div class="d-flex">
+                <MudSpacer />
+                <MudButton Class="mt-3" ButtonType="ButtonType.Button" Variant="Variant.Filled" OnClick="@(() => _events.Clear())">Clear</MudButton>
+            </div>
+        }
+    </MudExpansionPanel>
+</MudExpansionPanels>*@
+
+
+@code {
+
+
+
+    private Software software = new Software();
+    private IEnumerable<Software>? softwares = new List<Software>();
+
+    private bool _readOnly = true;
+    private bool _isCellEditMode;
+    private List<string> _events = new();
+    private bool _editTriggerRowClick;
+    private string _searchString = "";
+
+    // events
+    void StartedEditingItem(Software item)
+    {
+        _events.Insert(0, $"Event = StartedEditingItem, Data = {System.Text.Json.JsonSerializer.Serialize(item)}");
+    }
+
+    void CanceledEditingItem(Software item)
+    {
+        _events.Insert(0, $"Event = CanceledEditingItem, Data = {System.Text.Json.JsonSerializer.Serialize(item)}");
+    }
+
+    void CommittedItemChanges(Software item)
+    {
+        _events.Insert(0, $"Event = CommittedItemChanges, Data = {System.Text.Json.JsonSerializer.Serialize(item)}");
+        EditSoftware(item);
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    public async Task LoadData()
+    {
+        var unsortedSoftwares = await http.GetFromJsonAsync<List<Software>>("api/Softwares/GetSoftwares");
+        softwares = unsortedSoftwares.OrderBy(x => x.Id).ToList();
+    }
+
+    private Func<Software, bool> _quickFilter => x =>
+    {
+        if (string.IsNullOrWhiteSpace(_searchString))
+            return true;
+
+        if (x.Id.ToString().Contains(_searchString, StringComparison.OrdinalIgnoreCase))
+            return true;
+
+        if (x.SoftwareName.ToString().Contains(_searchString, StringComparison.OrdinalIgnoreCase))
+            return true;
+
+        return false;
+    };
+
+    private async Task EditSoftware(Software software)
+    {
+        await http.PutAsJsonAsync($"api/Softwares/PutSoftware", software);
+        await LoadData();
+    }
+
+    private async Task Delete(int softwareId)
+    {
+        await http.DeleteAsync($"api/Softwares/DeleteSoftware/{softwareId}");
+        Snackbar.Add("Software Deleted", Severity.Warning);
+        await LoadData();
+    }
+
+    private async Task OpenDialog()
+    {
+        await OnInitializedAsync();
+        var options = new DialogOptions { CloseOnEscapeKey = true };
+        var dialog = await DialogService.ShowAsync<AddSoftware>("New Software", options);
+        var result = await dialog.Result;
+
+        if (!result.Cancelled)
+        {
+            await LoadData();
+        }
+    }
+
+}

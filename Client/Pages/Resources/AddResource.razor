@@ -1,0 +1,51 @@
+﻿@page "/AddResource"
+@inject HttpClient http
+@using System.Net.Http.Json
+@using SoftwareLogAnalizer.Shared
+@using SoftwareLogAnalizer.Shared.Model
+@using SoftwareLogAnalizer.Shared.Model.Enums
+@inject MudBlazor.ISnackbar Snackbar
+@inject IDialogService DialogService
+
+
+<MudDialog>
+    <DialogContent>
+        <MudTextField T="string" Style="width: 25000px;" @bind-Value=resource.ResourceName Label="Resource Name"></MudTextField>
+        <MudTextField T="int" Style="width: 25000px;" @bind-Value=resource.ProjectResourceId Label="MS Project resource Id"></MudTextField>
+        <MudSelect T="ResourceType" Style="width: 25000px;" @bind-Value=resource.ResourceType Required RequiredError="You must select a Resource type" Margin="@Margin.Dense">
+            @foreach (ResourceType type in Enum.GetValues(typeof(ResourceType)))
+            {
+                <MudSelectItem Value="@type">@type</MudSelectItem>
+            }
+        </MudSelect>
+        <MudSelect T="ResourceCategory" Style="width: 25000px;" @bind-Value=resource.ResourceCategory Required RequiredError="You must select a Resource category" Margin="@Margin.Dense">
+            @foreach (ResourceCategory type in Enum.GetValues(typeof(ResourceCategory)))
+            {
+                <MudSelectItem Value="@type">@type</MudSelectItem>
+            }
+        </MudSelect>
+        <MudSelect T="ResourceUsageState" Style="width: 25000px;" @bind-Value=resource.ResourceUsageState Required RequiredError="You must select a Resource state" Margin="@Margin.Dense">
+            @foreach (ResourceUsageState type in Enum.GetValues(typeof(ResourceUsageState)))
+            {
+                <MudSelectItem Value="@type">@type</MudSelectItem>
+            }
+        </MudSelect>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Primary" OnClick="PostResource">Add Resource</MudButton>
+    </DialogActions>
+</MudDialog>
+@code {
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+
+    Resource resource = new Resource();
+
+    async Task PostResource()
+    {
+        await http.PostAsJsonAsync("api/Resources/PostResource", resource);
+        MudDialog.Close(DialogResult.Ok(true));
+        Snackbar.Add("Resource Added", Severity.Success);
+    }
+    void Cancel() => MudDialog.Cancel();
+}
