@@ -27,13 +27,16 @@ namespace SoftwareLogAnalizer.Server.Controllers
         [Route("GetEmployees")]
         public async Task<ActionResult<List<Employee>>> GetEmployees()
         {
+            //var companies = _context.Companies.ToList();
+            //var resources = _context.Resources.ToList();
+
                 if (_context.Employees == null)
                 {
                     return NotFound();
                 }
                 var employes = await _context.Employees
-                      .Include(e => e.Company)
-                      .Include(e => e.Resource)
+                      //.Include(e => e.Company)
+                      //.Include(e => e.Resource)
                       .ToListAsync();
                 return employes;
         }

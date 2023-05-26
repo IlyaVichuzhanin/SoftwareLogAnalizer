@@ -941,11 +941,11 @@
       "url": "_framework\/SoftwareLogAnalizer.Shared.pdb"
     },
     {
-      "hash": "sha256-9xilOcBFQfId8PwcSvsglah9pX\/colDYoqf5rUWFphw=",
+      "hash": "sha256-Y0duY9Bgv9nIEzSj7wpTQh88oADHhC30Lm9BtihMa\/o=",
       "url": "_framework\/SoftwareLogAnalizer.Client.dll"
     },
     {
-      "hash": "sha256-IV9GjPWG+sIr+sllh4IPstzuf3z4c0FTyUGZXHSCo+o=",
+      "hash": "sha256-lFdP1dZ21mcm41+QfnpAFDkYaScVZnk66SbqUNYi59s=",
       "url": "_framework\/SoftwareLogAnalizer.Client.pdb"
     },
     {
@@ -953,7 +953,7 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-lrRt6LAsQW\/LeGMcflGXUR7T7wI3XQXkvUFbsQF23us=",
+      "hash": "sha256-9nsBWsFWQjXfRhvXMjd3VLUj9hY\/J5tGN2ONzyCfOAg=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -1105,5 +1105,5 @@
       "url": "_content\/Blazorise.DataGrid\/datagrid.js"
     }
   ],
-  "version": "d6Oz1n+2"
+  "version": "xxLpNInk"
 };
