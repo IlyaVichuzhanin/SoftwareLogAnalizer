@@ -12,7 +12,7 @@ using SoftwareLogAnalizer.Server;
 namespace SoftwareLogAnalizer.Server.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230524061651_InitialDatabase")]
+    [Migration("20230526045041_InitialDatabase")]
     partial class InitialDatabase
     {
         /// <inheritdoc />

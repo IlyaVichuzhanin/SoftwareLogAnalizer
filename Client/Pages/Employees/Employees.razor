@@ -11,7 +11,7 @@
 <h3>Employees</h3>
 
 
-<table>
+@*<table>
     <thead>
         <tr>
             <th>Id</th>
@@ -27,19 +27,19 @@
             <tr>
                 <td>@employee.Id</td>
                 <td>@employee.FullName</td>
-                @*<td>@employee.Resource</td>*@
+                <td>@employee.Resource</td>
                 <td>@employee.EmployeType</td>
-                @*<td>@employee.Company</td>*@
+                <td>@employee.Company</td>
             </tr>
         }
     </tbody>
-</table>
+</table>*@
 
-@*<MudButton @onclick="OpenDialog" Variant="Variant.Filled" Color="Color.Primary">
+<MudButton @onclick="OpenDialog" Variant="Variant.Filled" Color="Color.Primary">
     Add new Employee
-</MudButton>*@
+</MudButton>
 
-@*<MudDataGrid T="Employee" Items=employeeService.Employees FixedHeader="true" FixedFooter="true" ReadOnly="@_readOnly" EditMode="@(_isCellEditMode ? DataGridEditMode.Cell : DataGridEditMode.Form)"
+<MudDataGrid T="Employee" Items=employeeService.Employees FixedHeader="true" FixedFooter="true" ReadOnly="@_readOnly" EditMode="@(_isCellEditMode ? DataGridEditMode.Cell : DataGridEditMode.Form)"
              StartedEditingItem="@StartedEditingItem" CanceledEditingItem="@CanceledEditingItem" CommittedItemChanges="@CommittedItemChanges"
              Bordered="true" Dense="true" EditTrigger="@(_editTriggerRowClick ? DataGridEditTrigger.OnRowClick : DataGridEditTrigger.Manual)"
              SortMode="SortMode.Multiple" Filterable="true" QuickFilter="@_quickFilter">
@@ -92,11 +92,11 @@
     <PagerContent>
         <MudDataGridPager T="Employee" />
     </PagerContent>
-</MudDataGrid>*@
+</MudDataGrid>
 
 
 
-@*<div class="d-flex flex-wrap mt-4">
+<div class="d-flex flex-wrap mt-4">
     <MudSwitch @bind-Checked="@_readOnly" Color="Color.Primary">Read Only</MudSwitch>
     <div class="d-flex justify-start align-center">
         <p class="mud-typography mud-typography-body1 mud-inherit-text mr-2">Form</p>
@@ -106,7 +106,7 @@
         <p class="mud-typography mud-typography-body1 mud-inherit-text mr-2">Manual</p>
         <MudSwitch @bind-Checked="@_editTriggerRowClick">On Row Click</MudSwitch>
     </div>
-</div>*@
+</div>
 
 @*<MudExpansionPanels Style="flex:1">
     <MudExpansionPanel Text="Show Events">
